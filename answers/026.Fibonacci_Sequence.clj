@@ -1,0 +1,1 @@
+(= (#(take % (map first (iterate (fn [[a b]] [b (+ a b)]) [1N 1N]))) 3) '(1 1 2))
