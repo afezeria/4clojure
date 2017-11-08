@@ -1,1 +1,0 @@
-(= (#(apply str (re-seq #"[A-Z]" %)) "HeLlo,WoRlD!") "HLOWRD")
