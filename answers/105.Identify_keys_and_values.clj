@@ -14,3 +14,8 @@
                        (drop-last (interleave % (repeat ())))
                        [%])
                     (partition-by keyword? coll)))))
+
+(fn conv [s]
+  (reduce (fn [r [k v]]
+            (assoc (into r (zipmap k (repeat []))) (last k) v)) {}
+          (partition 2 (partition-by keyword? s))))
